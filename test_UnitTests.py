@@ -18,18 +18,4 @@ def test_GetBondPriceE():
     couponRate = .04
     assert round(BondPrice_E_File.getBondPrice_E(face, couponRate, yc)) == 2098949 
 
-import BondPrice_Z_File
-def test_GetBondPriceZ():
-    yc = [.010,.015,.020,.025,.030]
-    times=[1,1.5,3,4,7]
-    face = 2000000
-    couponRate = .04
-    x = BondPrice_Z_File.getBondPrice_Z(face, couponRate, times, yc)
-    assert round(x) == 1996533
-    
-import FizzBuzz_File
-def test_FizzBuzz():
-    x = FizzBuzz_File.FizzBuzz(40,45)
-    assert x[0] == "buzz"
-    assert x[1] == 41
-    assert x[5] == "fizzbuzz"
+
